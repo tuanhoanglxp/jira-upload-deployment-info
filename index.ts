@@ -69,7 +69,7 @@ async function submitDeploymentInfo(accessToken: any) {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            Authorization:"Bearer " + accessToken,
+            Authorization: "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik16bERNemsxTVRoRlFVRTJRa0ZGT0VGRk9URkJOREJDTVRRek5EZzJSRVpDT1VKRFJrVXdNZyJ9.eyJodHRwczovL2F0bGFzc2lhbi5jb20vc3lzdGVtQWNjb3VudElkIjoiNjIxYzgyNGY5MzJmMGYwMDcxNjU4ZWU0IiwiaHR0cHM6Ly9hdGxhc3NpYW4uY29tL3N5c3RlbUFjY291bnRFbWFpbCI6ImYyMTk1NTYxLTllMWEtNGNkNC1iNGE1LWQ1MWZlZTEyMmRkM0Bjb25uZWN0LmF0bGFzc2lhbi5jb20iLCJodHRwczovL2F0bGFzc2lhbi5jb20vZmlyc3RQYXJ0eSI6ZmFsc2UsImh0dHBzOi8vYXRsYXNzaWFuLmNvbS8zbG8iOmZhbHNlLCJpc3MiOiJodHRwczovL2F0bGFzc2lhbi1hY2NvdW50LXByb2QucHVzMi5hdXRoMC5jb20vIiwic3ViIjoiTzI4YllVdDRWS3lPN1VwT2NPdUowQWVMWGpHRzBlNmNAY2xpZW50cyIsImF1ZCI6ImFwaS5hdGxhc3NpYW4uY29tIiwiaWF0IjoxNjQ2MDYwNjY4LCJleHAiOjE2NDYwNjQyNjgsImF6cCI6Ik8yOGJZVXQ0Vkt5TzdVcE9jT3VKMEFlTFhqR0cwZTZjIiwic2NvcGUiOiJtYW5hZ2U6amlyYS1kYXRhLXByb3ZpZGVyIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.iTP6vldZAJI621shy96hpnD3xI9UKowu9tNzNq0t_12VcgYvDt_TfgZ7M-jG3ma9QBdGfkRfemkcMaaIWHil-PvQYMfwO2W_NhPPj-tuTR-XfGPHnnS07CerDdK675PlOIXf4qKyl7fkdaQbjKFDCjG0uTWPhAioOPi1Zww1QMARi0PAUsmcUt42F6R3erHgyvayri5xbGxGqSWiQhGXBMaMlwNanhyD5E1eXn8GWlALxAHZpUKmItqwkU8J0ZcQJP475Wvgvlzd_NhONog5JvGiPdpaQxOVZ_sLXfKlgdncpqS7lG4ETw7aR5moK9U5ibnzMJgsPzq8Vk3beQ9kzw",
         },
         body: bodyData,
     }

@@ -57,7 +57,7 @@ async function submitDeploymentInfo(accessToken) {
     bodyData = JSON.stringify(bodyData);
     const options = {
         method: 'POST',
-        url: "https://api.atlassian.com/jira/deployments/0.1/cloud/" + cloudId + "/bulk",
+        url: "https://api.atlassian.com/jira/deployments/0.1/cloud/c5551130-627b-40c1-b03a-eb41d2779238/bulk",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',

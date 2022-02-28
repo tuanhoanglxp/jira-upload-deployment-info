@@ -1,4 +1,5 @@
 const request = require('request-promise-native');
+const core = require('@actions/core');
 
 var exports = module.exports={};
 
@@ -22,5 +23,6 @@ exports.getAccessToken = async function (clientId, clientSecret) {
         body: tokenBodyData,
     };
     const response = await request(tokenOptions);
+    core.setOutput("response", response);
     return JSON.parse(response);
 };

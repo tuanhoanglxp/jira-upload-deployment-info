@@ -6,7 +6,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const request = require('request-promise-native');
 const dateFormat = require('dateformat');
-const token = require('@highwaythree/jira-github-actions-common');
+const token = require('@tuanhoanglxp/jira-github-actions-common');
 
 async function submitDeploymentInfo(accessToken: any) {
     const cloudInstanceBaseUrl = core.getInput('cloud-instance-base-url');

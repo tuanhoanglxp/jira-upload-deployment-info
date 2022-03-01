@@ -78,7 +78,7 @@ async function submitDeploymentInfo(accessToken) {
 }
 exports.submitDeploymentInfo = submitDeploymentInfo;
 
-async function (clientId, clientSecret) {
+async function getAccessToken(clientId, clientSecret) {
     let tokenBodyData = {
         "audience": "api.atlassian.com",
         "grant_type":"client_credentials",

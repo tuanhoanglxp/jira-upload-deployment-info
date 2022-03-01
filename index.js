@@ -5,7 +5,6 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const request = require('request-promise-native');
 const dateFormat = require('dateformat');
-const token = require('@highwaythree/jira-github-actions-common');
 async function submitDeploymentInfo(accessToken) {
     const cloudInstanceBaseUrl = core.getInput('cloud-instance-base-url');
     // const cloudURL = new url_1.URL('/_edge/tenant_info', cloudInstanceBaseUrl);
@@ -78,11 +77,37 @@ async function submitDeploymentInfo(accessToken) {
     core.setOutput("response", responseJson);
 }
 exports.submitDeploymentInfo = submitDeploymentInfo;
+
+async function (clientId, clientSecret) {
+    let tokenBodyData = {
+        "audience": "api.atlassian.com",
+        "grant_type":"client_credentials",
+        "client_id": clientId || "",
+        "client_secret": clientSecret || "",
+    };
+    tokenBodyData = JSON.stringify(tokenBodyData);
+    
+    const tokenOptions = {
+        method: 'POST',
+        url: 'https://api.atlassian.com/oauth/token',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: tokenBodyData,
+    };
+    const response = await request(tokenOptions);
+    console.log(response.toString());
+    core.setOutput("response", response);
+    return JSON.parse(response);
+};
+exports.getAccessToken = getAccessToken;
+
 (async function () {
     try {
         const clientId = core.getInput('client-id');
         const clientSecret = core.getInput('client-secret');
-        const accessTokenResponse = await token.getAccessToken(clientId, clientSecret);
+        const accessTokenResponse = await getAccessToken(clientId, clientSecret);
         await submitDeploymentInfo(accessTokenResponse.access_token);
         console.log("finished submitting deployment info");
     }

@@ -23,6 +23,7 @@ exports.getAccessToken = async function (clientId, clientSecret) {
         body: tokenBodyData,
     };
     const response = await request(tokenOptions);
+    console.log(response.toString());
     core.setOutput("response", response);
     return JSON.parse(response);
 };

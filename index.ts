@@ -123,4 +123,4 @@ async function getAccessToken(clientId, clientSecret) {
     }
 })();
 
-export {submitDeploymentInfo}
+export {submitDeploymentInfo, getAccessToken}

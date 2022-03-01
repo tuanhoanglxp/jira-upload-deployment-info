@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/HighwayThree/jira-upload-deployment-info#readme",
   "dependencies": {
-    "@tuanhoanglxp/jira-github-actions-common": "git://github.com/tuanhoanglxp/jira-github-actions-common.git",
     "dateformat": "^3.0.3",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9"
